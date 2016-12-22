@@ -27,8 +27,6 @@ link: function ($scope, ele, attrs) {
 	nav.append(btnBlue);
 	nav.append(btnYellow);
 	$(ele).append(nav);
-
-	stl.addOrbitControl();
 },// link ending
 };}])// stl-handler ending
 ;// angular.module ending

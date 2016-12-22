@@ -28,6 +28,7 @@ var stl = {
 		support: new THREE.Color('#CACACA'),
 		white: new THREE.Color('#ffffff'),
 	},
+	size: '',
 };
 
 stl.init = function () {
@@ -73,6 +74,7 @@ stl.init = function () {
 	_this.renderer.setSize(_this.width(), _this.height());
 	_this.renderer.shadowMap.enabled = true;
 	_this.scene.fog = new THREE.FogExp2(_this.colors.support, 0.0128);
+	_this.addOrbitControl();
 	_this.container.appendChild(_this.renderer.domElement);
 	window.addEventListener('resize', _this.onWindowResize, false);
 };
@@ -95,6 +97,7 @@ stl.animate = function () {
 stl.addOrbitControl = function () {
 	var _this = stl;
 	_this.controls = new THREE.OrbitControls(_this.camera, _this.renderer.domElement);// orbitcontrols();
+	_this.controls.maxDistance = 100;
 };
 
 stl.render = function () {
