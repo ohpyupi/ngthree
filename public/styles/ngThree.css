@@ -1,0 +1,26 @@
+.ng-three.view {
+	width: 320px;
+	height: 320px;
+}
+.ng-three.view canvas {
+	width: 100%;
+	display: block;
+	float: left;
+}
+.ng-three.nav {
+	margin: 0;
+	width: 100%;
+	display: block;
+	float: left;
+	background-color: rgba(237, 237, 237, 1);
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+.ng-three.nav button {
+	font-size: 14px;
+	padding: 7px;
+	background-color: #fff;
+	border: none;
+	margin-right: 4px;
+}
+
