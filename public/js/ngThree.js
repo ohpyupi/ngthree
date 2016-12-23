@@ -1,4 +1,4 @@
-angular.module('MyApp', ['ngThreeSTL'])
+angular.module('ngThree', ['ngThreeSTL'])
 .directive('stlHandler', ['stl', '$compile',function (stl, $compile) {return {// stl-handler starting
 restrict: 'A',
 controller: ['$scope', '$element', '$attrs', function ($scope, ele, attrs) {
@@ -14,7 +14,7 @@ controller: ['$scope', '$element', '$attrs', function ($scope, ele, attrs) {
 }],
 link: function ($scope, ele, attrs) {
 	var nav = $('<div class="ng-three nav"></div>');
-	var btnWireframe = $('<button style="margin-left: 4px" class="btn-wireframe" ng-click="toggleWireframe()">Wireframe</button>')
+	var btnWireframe = $('<button style="margin-left: 4px" class="btn-wireframe" ng-click="toggleWireframe()" alt="Wireframe"></button>')
 	var btnColor = $('<input class="spectrum-color"></input>')
 	$compile(btnWireframe)($scope);
 	nav.append(btnWireframe);
@@ -25,7 +25,7 @@ link: function ($scope, ele, attrs) {
 	$('.spectrum-color').spectrum({
 		color: stl.colors.primary.getHexString(),
 	});
-	btnColor.on('dragstart.spectrum', function (e, color) {
+	btnColor.on('move.spectrum', function (e, color) {
 		var hex = color.toHexString();
 		stl.changeColor(hex);
 	});
