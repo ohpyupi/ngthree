@@ -14,19 +14,21 @@ controller: ['$scope', '$element', '$attrs', function ($scope, ele, attrs) {
 }],
 link: function ($scope, ele, attrs) {
 	var nav = $('<div class="ng-three nav"></div>');
-	var btnWireframe = $('<button class="btn-wireframe" ng-click="toggleWireframe()">Wireframe</button>')
-	var btnRed = $('<button class="btn-colors" ng-click="changeColor(\'r\')">Red</button>')
-	var btnBlue = $('<button class="btn-colors" ng-click="changeColor(\'b\')">Blue</button>')
-	var btnYellow = $('<button class="btn-colors" ng-click="changeColor(\'y\')">Red</button>')
+	var btnWireframe = $('<button style="margin-left: 4px" class="btn-wireframe" ng-click="toggleWireframe()">Wireframe</button>')
+	var btnColor = $('<input class="spectrum-color"></input>')
 	$compile(btnWireframe)($scope);
-	$compile(btnRed)($scope);
-	$compile(btnBlue)($scope);
-	$compile(btnYellow)($scope);
 	nav.append(btnWireframe);
-	nav.append(btnRed);
-	nav.append(btnBlue);
-	nav.append(btnYellow);
+	nav.append(btnColor);
 	$(ele).append(nav);
+	// 
+	console.log(stl.colors.primary.getHex());
+	$('.spectrum-color').spectrum({
+		color: stl.colors.primary.getHexString(),
+	});
+	btnColor.on('dragstart.spectrum', function (e, color) {
+		var hex = color.toHexString();
+		stl.changeColor(hex);
+	});
 },// link ending
 };}])// stl-handler ending
 ;// angular.module ending

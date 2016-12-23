@@ -33,6 +33,7 @@ var stl = {
 
 stl.init = function () {
 	var _this = stl;
+	_this.camera.aspect = _this.width() / _this.height();
 	_this.loader.load(_this.objPath, function (geometry) {
 		// tipical config
 		_this.scene.background = new THREE.Color(stl.colors.support);
@@ -133,13 +134,7 @@ stl.addGrid = function () {
 
 stl.changeColor = function (color) {
 	var _this = stl;
-	if (color === 'r') {
-		_this.material.color = _this.colors.warning;
-	} else if (color === 'b') {
-		_this.material.color = _this.colors.primary;
-	} else if (color === 'y') {
-		_this.material.color = new THREE.Color('#FFEB01');
-	}
+	_this.material.color = new THREE.Color(color);
 };
 
 stl.onWindowResize = function () {

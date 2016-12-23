@@ -16,7 +16,7 @@
 				<img src='http://www.icaninfotech.com/wp-content/uploads/2015/04/angularjs-development-services.png'></img>
 			</div>
 			<div class='con-header'>
-				<h1>ngThree <small><i>alpha v0.0.2</i></small></h1>
+				<h1>ngThree <small><i>alpha v0.0.1</i></small></h1>
 				<hr>
 				<span>created by <a href='https://github.com/ohpyupi' target='_blank'>ohpyupi</a></span>
 			</div>
@@ -37,16 +37,6 @@
 					<p>
 						Before integrating ngThree to your application, <a href='https://jquery.com/' target='_blank'>jquery</a>, <a href='https://angularjs.org/' target='_blank'>angular.js</a> and <a href='https://threejs.org/' target='_blank'>three.js</a> is required. Please check the prerequiste section for more details.
 					</p>
-				</div>
-				<div class='row'>
-					<h2>Prerequisite</h2>
-					<ul>
-						<li><a href='https://jquery.com/' target='_blank'>jQuery</a></li>
-						<li><a href='https://angularjs.org/' target='_blank'>Angular.js</a></li>
-						<li><a href='https://threejs.org/' target='_blank'>three.js</a> (Use only latest version)</li>
-						<li><a href='https://github.com/bgrins/spectrum' target='_blank'>spectrum</a></li>
-						<li><a href='https://github.com/ohpyupi/ngthree' target='_blank'>ngThree (This package)</a></li>
-					</ul>
 				</div>
 				<div class='row'>
 					<h2>How to start</h2>
