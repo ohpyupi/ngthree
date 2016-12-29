@@ -1,0 +1,40 @@
+.ng-three.view {
+	width: 100%;
+	height: 320px;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.ng-three.view canvas {
+	width: 100%;
+	display: block;
+	float: left;
+}
+.ng-three.nav {
+	margin: 0;
+	width: 100%;
+	display: flex;
+	float: left;
+	flex-direction: row;
+	background-color: rgba(237, 237, 237, 1);
+	padding-top: 3px;
+	padding-bottom: 3px;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.ng-three.nav button {
+	font-size: 14px;
+	padding: 7px;
+	background: url('https://cdn4.iconfinder.com/data/icons/minimal-set-three/32/minimal-07-512.png'), rgba(255, 255, 255, .7);
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+	cursor: pointer;
+	background-size: cover;
+	background-position: center;
+	border: none;
+	margin-right: 4px;
+	height: 28px;
+	width: 28px;
+}
+.ng-three.nav .spectrum-color + .sp-replacer {
+	border: none;
+	background-color: rgba(255, 255, 255, .7);
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+	height: 28px;
+}

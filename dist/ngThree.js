@@ -21,7 +21,6 @@ link: function ($scope, ele, attrs) {
 	nav.append(btnColor);
 	$(ele).append(nav);
 	// 
-	console.log(stl.colors.primary.getHex());
 	$('.spectrum-color').spectrum({
 		color: stl.colors.primary.getHexString(),
 	});

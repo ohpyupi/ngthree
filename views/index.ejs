@@ -8,9 +8,9 @@
 		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 		<link rel="icon" href="/favicon.ico" type="image/x-icon">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-		<link rel='stylesheet' href='/assets/spectrum/spectrum.css'></link>
+		<link rel='stylesheet' href='/spectrum.css'></link>
 		<link rel='stylesheet' href='/styles/style.css'></link>
-		<link rel='stylesheet' href='/styles/ngThree.css'></link>
+		<link rel='stylesheet' href='/ngThree.css'></link>
 	</head>
 	<body>
 		<section class='header'>
@@ -53,7 +53,7 @@
 				<div class='row'>
 					<h2>How to start</h2>
 					<div class='con-codepen'>
-<p data-height="265" data-theme-id="dark" data-slug-hash="LbvZWv" data-default-tab="html" data-user="supergentle" data-embed-version="2" data-pen-title=" ngThree" class="codepen">See the Pen <a href="http://codepen.io/supergentle/pen/LbvZWv/"> ngThree</a> by Hoseong Lee (<a href="http://codepen.io/supergentle">@supergentle</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<p data-height="344" data-theme-id="dark" data-slug-hash="LbvZWv" data-default-tab="html" data-user="supergentle" data-embed-version="2" data-pen-title=" ngThree" class="codepen">See the Pen <a href="http://codepen.io/supergentle/pen/LbvZWv/"> ngThree</a> by Hoseong Lee (<a href="http://codepen.io/supergentle">@supergentle</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 					</div>
 				</div>
@@ -69,6 +69,7 @@
 						<li><span class='line-through'>Wireframe icon</span> 2016.12.23.</li>
 						<li>directional lights.</li>
 						<li>Multiple viewers in a page.</li>
+						<li>Decoupling STL service and the interface's scope</li>
 					<ul>
 				</div>
 			</div><!-- .container -->
@@ -78,14 +79,19 @@
 			<div class='con-footer'>
 			</div>
 		</footer>
-		<script src='/js/jquery.min.js'></script>
-		<script src='/js/angular.min.js'></script>
-		<script src='/assets/spectrum/spectrum.js'></script>
-		<script src='/js/three.js/build/three.min.js'></script>
-		<script src='/js/three.js/examples/js/loaders/STLLoader.js'></script>
-		<script src='/js/OrbitControls.js'></script>
-		<script src='/js/ngThree.js'></script>
-		<script src='/js/ngThreeSTL.js'></script>
-		<script src='/js/app.js'></script>
+		<script src='/jquery.min.js'></script>
+		<script src='/angular.min.js'></script>
+		<script src='/spectrum.js'></script>
+		<!-- three.js and its packages has to be in the same version (Here r83) -->
+		<script src='/three.min.js'></script>
+		<script src='/STLLoader.js'></script>
+		<script src='/OrbitControls.js'></script>
+		<!-- ngThreeSTL provides STL engine -->
+		<script src='/ngThreeSTL.js'></script>
+		<!-- ngThree provides an interface for ngThreeSTL -->
+		<script src='/ngThree.js'></script>
+		<script>
+			angular.module('MyApp', ['ngThree']);
+		</script>
 	</body>
 </html>
