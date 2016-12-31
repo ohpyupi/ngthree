@@ -18,7 +18,7 @@
 				<img src='http://www.icaninfotech.com/wp-content/uploads/2015/04/angularjs-development-services.png'></img>
 			</div>
 			<div class='con-header'>
-				<h1>ngThree <small><i>alpha v0.0.2</i></small></h1>
+				<h1>ngThree <small><i>alpha v0.0.5</i></small></h1>
 				<hr>
 				<span>created by <a href='https://github.com/ohpyupi' target='_blank'>ohpyupi</a></span>
 			</div>
@@ -53,7 +53,7 @@
 				<div class='row'>
 					<h2>How to start</h2>
 					<div class='con-codepen'>
-<p data-height="344" data-theme-id="dark" data-slug-hash="LbvZWv" data-default-tab="html" data-user="supergentle" data-embed-version="2" data-pen-title=" ngThree" class="codepen">See the Pen <a href="http://codepen.io/supergentle/pen/LbvZWv/"> ngThree</a> by Hoseong Lee (<a href="http://codepen.io/supergentle">@supergentle</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<p data-height="265" data-theme-id="dark" data-slug-hash="LbvZWv" data-default-tab="html" data-user="supergentle" data-embed-version="2" data-pen-title=" ngThree" class="codepen">See the Pen <a href="http://codepen.io/supergentle/pen/LbvZWv/"> ngThree</a> by Hoseong Lee (<a href="http://codepen.io/supergentle">@supergentle</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 					</div>
 				</div>
@@ -61,15 +61,17 @@
 					<h2>Examples</h2>
 					<section stl-handler class='ng-three view' data-url='/stl/pikachu.stl'>
 					</section>
+					<section stl-handler class='ng-three view' data-url='/stl/balloon.stl'>
+					</section>
 				</div>
 				<div class='row'>
 					<h2>To be updated</h2>
 					<ul>
 						<li><span class='line-through'>color picker</span> 2016.12.22.</li>
 						<li><span class='line-through'>Wireframe icon</span> 2016.12.23.</li>
+						<li><span class='line-through'>Multiple viewers in a page</span> 2016.12.31.</li>
+						<li><span class='line-through'>Decoupling STL service and the interface's scope</span> 2016.12.31</li>
 						<li>directional lights.</li>
-						<li>Multiple viewers in a page.</li>
-						<li>Decoupling STL service and the interface's scope</li>
 					<ul>
 				</div>
 			</div><!-- .container -->
@@ -83,15 +85,14 @@
 		<script src='/angular.min.js'></script>
 		<script src='/spectrum.js'></script>
 		<!-- three.js and its packages has to be in the same version (Here r83) -->
-		<script src='/three.min.js'></script>
+		<script src='/three.js'></script>
 		<script src='/STLLoader.js'></script>
 		<script src='/OrbitControls.js'></script>
 		<!-- ngThreeSTL provides STL engine -->
 		<script src='/ngThreeSTL.js'></script>
 		<!-- ngThree provides an interface for ngThreeSTL -->
-		<script src='/ngThree.js'></script>
 		<script>
-			angular.module('MyApp', ['ngThree']);
+			angular.module('MyApp', ['ngThreeSTL']);
 		</script>
 	</body>
 </html>

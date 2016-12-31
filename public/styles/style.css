@@ -97,6 +97,26 @@ footer {
 	text-align: center;
 }
 
+.line-through {
+	text-decoration: line-through;
+}
+
+ul li {
+	list-style: none;
+}
+
+section.ng-three.view {
+	width: calc(50% - 6px);
+	display: block;
+	float: left;
+	margin: 0;
+	margin-left: 6px;
+}
+section.ng-three.view:first-of-type {
+	margin-left: 0px;
+	margin-right: 6px;
+}
+
 @media (max-width: 926px) {
 	.offset {
 		display: none;
@@ -104,11 +124,9 @@ footer {
 	.container {
 		width: 100%;
 	}
-}
-.line-through {
-	text-decoration: line-through;
-}
-
-ul li {
-	list-style: none;
+	section.ng-three.view {
+		width: 100%;
+		margin: 0;
+		margin-bottom: 15px;
+	}
 }
